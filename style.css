@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1140px;
+    margin: auto;
+}
+.menu{
+    background: #2f3542;
+}
+
+.menu ul{ 
+    text-align: center;
+}
+
+.menu ul li{
+    display: inline-block;
+    padding: 0px 10px;
+    position:relative;
+}
+
+.menu ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 0px;
+    display: inline-block;
+    position:relative;
+}
+
+.menu ul li a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    bottom: 55px;
+    left: 50%;
+    transition: .5s;
+}
+.menu ul li:hover > a::before{
+    width: 100%;
+    left: 0;
+}
+.menu ul li ul{
+    position: absolute;
+    background-color: #2f3542;
+    width: 200px;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    top: 120%;
+    left: 0;
+    border-top: 5px solid #1e90ff;
+}
+.menu ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    z-index: 9999999999;
+}
+.menu ul li ul li{
+    display: block;
+    padding: 0;
+}
+
+
+.menu ul li ul li a{
+    /* color: black; */
+    padding: 15px 10px;
+    display: block;
+    transition: 1s;
+}
+.menu ul li ul li a::before{
+    content: "";
+    display: none;
+}
+.menu ul li ul li a:hover{
+    padding-left: 25px;
+}
+.menu ul li ul li ul{
+    left: 100%;
+    top: 0 !important;
+}
+/* Banner Section */
+.banner{
+    background: url(./img/banner.jpg) center no-repeat;
+    background-size: cover;
+    padding: 200px 0;
+    position: relative;
+    z-index: 1;
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.754);
+    z-index: -1;
+}
+.banner-content{
+    text-align: center;
+}
+.banner-content h1, .banner-content p{
+    color: #fff;
+    line-height:40px;
+    
+}
+.banner-content .btn{
+    display: inline-block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff4757;
+    text-transform: uppercase;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* .banner-content .btn:hover{
+    color: red;
+} */
+/* About Section */
+.about{
+    margin: 50px 0;
+}
+.section-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+ .about-block{
+     width: 45%;
+     display: inline-block;
+ }
+.about-text{
+    vertical-align: top;
+}
+ .about-img img{
+     width: 100%;
+     height: 300px;
+     object-fit: cover;
+ }
+/* services */
+.services{
+    margin-bottom: 50px;
+}
+.service-items {
+    width: 347px;
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: center;
+    display: inline-block;
+    margin:15px;
+}
+.service-items span i{
+    font-size: 30px;
+    margin-bottom: 12px;
+    transition: .7s;
+}
+.service-items .item-title{
+    font-size: 26px;
+    margin-bottom: 8px;
+    transition: .7s;
+}
+.service-items:hover span i {
+    transform: scale(.7);
+}
+.service-items:hover .item-title{
+    transform: translate(30px);
+}
+.service-items:hover{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0,.10);
+}
+
+/* Footer */
+footer{
+    
+}
+.all-items{
+    margin-bottom: 40px;
+}
+.footer-item {
+    width: 154px;
+    display: inline-block;
+    /* text-align: center; */
+    margin: 0 35px;
+    /* border: 1px solid red; */
+    
+}
+.all-items .footer-item:last-child{
+    margin-right: 0;
+}
+/* .items-3{
+    text-align: right;
+} */
+.footer-item ul{
+    margin-top: 15px;
+}
+.footer-item ul li{
+    list-style: none;
+    font-size: 20px;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+.footer-item ul li:hover{
+    /* letter-spacing: 1px; */
+    padding-left: 10px;
+}
+.footer-item ul li::before{
+    content: "\f101";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 700;
+    position: absolute;
+    top: 5px;
+    left:-20px;
+
+}
+.copyright{
+   /* margin-bottom: 30px; */
+   padding: 30px;
+   background-color: #2f3542;
+}
+.copyright ul{
+    text-align: center;
+
+}
+.copyright ul li{
+    list-style: none;
+    font-size: 30px;
+    display: inline-block;
+    padding: 0 15px;
+
+}
+.copyright ul li a{
+    color: #fff;
+}
